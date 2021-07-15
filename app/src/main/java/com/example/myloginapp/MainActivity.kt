@@ -20,8 +20,13 @@ class MainActivity : AppCompatActivity() {
         btn_new_activity.setOnClickListener {
             var name = etname.text.toString()
             textView.setText(name)
-            Toast.makeText(this," Hii " + name,Toast.LENGTH_SHORT).show();
+            var sum = add(10,20)
+            Toast.makeText(this," Hii " + name+ sum,Toast.LENGTH_SHORT).show();
         }
+    }
+
+    fun add(a : Int,b : Int) : Int{
+        return a+b
     }
 
 }
