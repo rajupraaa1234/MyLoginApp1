@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyLoginApp</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="cancel">cancel</string>
+</resources>
