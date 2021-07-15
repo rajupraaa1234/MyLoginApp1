@@ -8,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
-
+//this is a new change
     lateinit var etname : EditText;   // declaration
     lateinit var textView: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
