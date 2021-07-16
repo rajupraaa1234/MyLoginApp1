@@ -80,6 +80,16 @@
         android:layout_margin="20dp"
         android:entries="@array/lanuage"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/sarf"
+        android:layout_width="wrap_content"
+        android:text="SARF"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:onClick="ClickHandler"
+        android:gravity="end"
+        android:layout_height="wrap_content"/>
+
 
 
 </LinearLayout>

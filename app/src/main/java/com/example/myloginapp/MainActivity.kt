@@ -47,6 +47,20 @@ class MainActivity : AppCompatActivity() {
             R.id.home->{goHome()}
             R.id.google->{openGoogle()}
             R.id.dail->{openDail()}
+            R.id.sarf->{openCamera()}
+        }
+    }
+
+    private fun openCamera() {
+          var intent=Intent(this,HomeActivity::class.java)
+               startActivityForResult(intent,123)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode==123 && resultCode==RESULT_OK){
+             var msg = data?.getStringExtra("msg")
+             Toast.makeText(this,"Hay This is onActivityResult " + msg ,Toast.LENGTH_SHORT).show()
         }
     }
 
