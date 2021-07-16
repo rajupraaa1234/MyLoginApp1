@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         home_btn.setOnClickListener {
             var HomeIntent : Intent
             HomeIntent =Intent(this,HomeActivity::class.java)
+            HomeIntent.putExtra("MyKey","Hii Raju")
             startActivity(HomeIntent)
 
         }
