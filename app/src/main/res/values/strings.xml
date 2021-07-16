@@ -5,4 +5,6 @@
     <string name="login">Login</string>
     <string name="cancel">cancel</string>
     <string name="home">Home</string>
+    <string name="dail">Dail</string>
+    <string name="google">Google</string>
 </resources>

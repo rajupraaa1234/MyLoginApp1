@@ -25,11 +25,15 @@
 
    <LinearLayout
        android:layout_width="match_parent"
+       android:layout_gravity="center_horizontal"
+       android:gravity="center"
        android:layout_height="wrap_content">
       <Button
           android:id="@+id/login"
           android:layout_width="wrap_content"
-          android:layout_margin="20dp"
+          android:layout_margin="10dp"
+          android:layout_weight="1"
+          android:onClick="ClickHandler"
           android:text="@string/login"
           android:layout_height="wrap_content"/>
 
@@ -37,9 +41,33 @@
           android:id="@+id/home"
           android:layout_width="wrap_content"
           android:text="@string/home"
-          android:layout_margin="20dp"
+          android:layout_weight="1"
+          android:layout_margin="10dp"
+          android:onClick="ClickHandler"
           android:gravity="end"
           android:layout_height="wrap_content"/>
+
+       <Button
+           android:id="@+id/google"
+           android:layout_width="wrap_content"
+           android:text="@string/google"
+           android:layout_weight="1"
+           android:layout_margin="10dp"
+           android:onClick="ClickHandler"
+           android:gravity="end"
+           android:layout_height="wrap_content"/>
+
+
+       <Button
+           android:id="@+id/dail"
+           android:layout_width="wrap_content"
+           android:text="@string/dail"
+           android:layout_margin="10dp"
+           android:layout_weight="1"
+           android:onClick="ClickHandler"
+           android:gravity="end"
+           android:layout_height="wrap_content"/>
+
    </LinearLayout>
   <TextView
       android:layout_width="wrap_content"
