@@ -5,10 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
 //this is a new change
@@ -17,8 +14,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var country = arrayOf("India","Pakistan","USA")
         var btn_new_activity = findViewById(R.id.login) as Button
         var  check = findViewById(R.id.check) as Button
+        var spinner = findViewById<Spinner>(R.id.spinner) as Spinner
         check.setOnClickListener(View.OnClickListener {
             Toast.makeText(this,"Hay This is onActivityResult "  ,Toast.LENGTH_SHORT).show()
         })
@@ -27,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         textView = findViewById(R.id.mytxt)
 
+        //Set Adapter
+        var adapter = ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,country)
+
+        spinner.adapter = adapter
 //        home_btn.setOnClickListener(View.OnClickListener {
 //
 //        })
