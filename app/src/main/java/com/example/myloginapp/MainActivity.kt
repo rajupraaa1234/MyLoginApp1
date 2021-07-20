@@ -18,7 +18,28 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var country = arrayOf("India","Pakistan","USA")
-        var btn_new_activity = findViewById(R.id.login) as Button
+
+
+        //PopUp Menu
+        var popup = findViewById(R.id.popup) as Button
+        popup.setOnClickListener(View.OnClickListener {
+            val popupMenu: PopupMenu = PopupMenu(this,popup)
+            popupMenu.menuInflater.inflate(R.menu.popup_menu,popupMenu.menu)
+            popupMenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
+                when(item.itemId) {
+                    R.id.one ->
+                        Toast.makeText(this@MainActivity, "You Clicked one : " + item.title, Toast.LENGTH_SHORT).show()
+                    R.id.two ->
+                        Toast.makeText(this@MainActivity, "You Clicked two: " + item.title, Toast.LENGTH_SHORT).show()
+                    R.id.three ->
+                        Toast.makeText(this@MainActivity, "You Clicked three: " + item.title, Toast.LENGTH_SHORT).show()
+                }
+                true
+            })
+            popupMenu.show()
+        })
+
+
         var  check = findViewById(R.id.check) as Button
           focus = findViewById(R.id.focus)
 
