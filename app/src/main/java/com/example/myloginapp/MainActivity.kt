@@ -18,9 +18,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var btn_new_activity = findViewById(R.id.login) as Button
+        var  check = findViewById(R.id.check) as Button
+        check.setOnClickListener(View.OnClickListener {
+            Toast.makeText(this,"Hay This is onActivityResult "  ,Toast.LENGTH_SHORT).show()
+        })
         var home_btn = findViewById(R.id.home) as Button
         etname = findViewById(R.id.name);
+
         textView = findViewById(R.id.mytxt)
+
+//        home_btn.setOnClickListener(View.OnClickListener {
+//
+//        })
 //        home_btn.setOnClickListener {
 //            var HomeIntent : Intent
 //            HomeIntent =Intent(this,HomeActivity::class.java)

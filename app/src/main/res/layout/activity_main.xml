@@ -90,6 +90,16 @@
         android:gravity="end"
         android:layout_height="wrap_content"/>
 
+    <Button
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:text="check"
+        android:layout_margin="20dp"
+        android:inputType="textCapSentences"
+        android:layout_gravity="center"
+        android:onClick="ClickHandler"
+        android:gravity="end"
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>
