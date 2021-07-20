@@ -1,5 +1,6 @@
 package com.example.myloginapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 //this is a new change
     lateinit var etname : EditText;   // declaration
     lateinit var textView: TextView
+    lateinit var focus: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         var country = arrayOf("India","Pakistan","USA")
         var btn_new_activity = findViewById(R.id.login) as Button
         var  check = findViewById(R.id.check) as Button
+          focus = findViewById(R.id.focus)
+
         var spinner = findViewById<Spinner>(R.id.spinner) as Spinner
         check.setOnClickListener(View.OnClickListener {
             Toast.makeText(this,"Hay This is onActivityResult "  ,Toast.LENGTH_SHORT).show()
@@ -29,8 +33,28 @@ class MainActivity : AppCompatActivity() {
 
         //Set Adapter
         var adapter = ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,country)
-
         spinner.adapter = adapter
+
+
+
+        //Add Focus
+        focus.setOnClickListener(View.OnClickListener {
+            focus.setBackgroundResource(R.drawable.green_back);
+        })
+
+
+        focus.setOnFocusChangeListener { _, hasFocus ->
+            if (hasFocus)
+                changecolor()
+            else {
+                changeDefaultColor()
+            }
+        }
+
+//        focus.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+//
+//            focus.setBackgroundResource(R.drawable.yellow);
+//        }
 //        home_btn.setOnClickListener(View.OnClickListener {
 //
 //        })
@@ -48,6 +72,17 @@ class MainActivity : AppCompatActivity() {
 //            var sum = add(10,20)
 //            Toast.makeText(this," Hii " + name+ sum,Toast.LENGTH_SHORT).show();
 //        }
+    }
+
+    private fun changeDefaultColor() {
+        focus.setBackgroundResource(R.drawable.btn_back);
+    }
+
+    @SuppressLint("ResourceAsColor")
+    private fun changecolor() {
+        Toast.makeText(this,"On Focus"  ,Toast.LENGTH_SHORT).show()
+        //focus.setBackgroundResource(R.drawable.yellow);
+        focus.setBackgroundColor(R.color.yellow)
     }
 
     fun add(a : Int,b : Int) : Int{
