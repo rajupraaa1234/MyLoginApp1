@@ -91,6 +91,15 @@
         android:layout_height="wrap_content"/>
 
     <Button
+        android:id="@+id/rec"
+        android:layout_width="wrap_content"
+        android:text="Recycler data"
+        android:layout_gravity="center"
+        android:onClick="ClickHandler"
+        android:gravity="end"
+        android:layout_height="wrap_content"/>
+
+    <Button
         android:id="@+id/check"
         android:layout_width="wrap_content"
         android:text="check"

@@ -22,6 +22,13 @@ class MainActivity : AppCompatActivity() {
 
         //PopUp Menu
         var popup = findViewById(R.id.popup) as Button
+        var rec = findViewById<Button>(R.id.rec)
+
+        rec.setOnClickListener(View.OnClickListener {
+            var RecIntent : Intent
+            RecIntent =Intent(this,RecyclerViewActivity::class.java)
+            startActivity(RecIntent)
+        })
         popup.setOnClickListener(View.OnClickListener {
             val popupMenu: PopupMenu = PopupMenu(this,popup)
             popupMenu.menuInflater.inflate(R.menu.popup_menu,popupMenu.menu)
@@ -103,7 +110,7 @@ class MainActivity : AppCompatActivity() {
     private fun changecolor() {
         Toast.makeText(this,"On Focus"  ,Toast.LENGTH_SHORT).show()
         //focus.setBackgroundResource(R.drawable.yellow);
-        focus.setBackgroundColor(R.color.yellow)
+        focus.setBackgroundColor(R.drawable.yellow)
     }
 
     fun add(a : Int,b : Int) : Int{
