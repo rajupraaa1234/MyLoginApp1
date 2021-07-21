@@ -41,7 +41,7 @@ class RecyclerViewActivity : AppCompatActivity(), OnClickListner,ExampleDialog.E
         data.add("Sonu kumar")
         data.add("Rakesh kumar")
 
-
+        //Add Floating task
         myflotingbtn.setOnClickListener(View.OnClickListener {
             var exampleDialog : ExampleDialog  = ExampleDialog();
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
