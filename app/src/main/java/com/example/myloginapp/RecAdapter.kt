@@ -1,8 +1,6 @@
 package com.example.myloginapp
 
 import android.content.Context
-import android.os.Parcel
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,10 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myloginapp.interfacePackage.OnClickListner
 
-class RecAdapter(context : RecyclerViewActivity,data:Array<String>) :RecyclerView.Adapter<RecAdapter.ViewHolder>() {
+class RecAdapter(context: RecyclerViewActivity, data: ArrayList<String>) :RecyclerView.Adapter<RecAdapter.ViewHolder>() {
 
     var context : Context = context
-    var arr : Array<String> = data
+    var arr : ArrayList<String> = data
     var onclickItem : OnClickListner = context
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
@@ -26,7 +24,7 @@ class RecAdapter(context : RecyclerViewActivity,data:Array<String>) :RecyclerVie
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-       holder.textview.text = arr[position]
+       holder.textview.text = arr.get(position)
         holder.textview.setOnClickListener(View.OnClickListener {
             onclickItem.onItemClick(position)
         })
