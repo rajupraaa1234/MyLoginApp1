@@ -19,7 +19,6 @@
 
        <com.google.android.material.floatingactionbutton.FloatingActionButton
            android:id="@+id/floatingbtn"
-           android:visibility="gone"
            android:layout_width="wrap_content"
            android:layout_alignParentBottom="true"
            android:layout_alignParentRight="true"
@@ -28,6 +27,7 @@
 
     <LinearLayout
         android:id="@+id/lin1"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_margin="5dp"

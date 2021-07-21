@@ -8,10 +8,11 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myloginapp.Dialog.ExampleDialog
 import com.example.myloginapp.interfacePackage.OnClickListner
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class RecyclerViewActivity : AppCompatActivity(), OnClickListner{
+class RecyclerViewActivity : AppCompatActivity(), OnClickListner,ExampleDialog.ExampleDialogListener{
     var data : ArrayList<String> = ArrayList<String>()
 
 
@@ -41,23 +42,26 @@ class RecyclerViewActivity : AppCompatActivity(), OnClickListner{
         data.add("Rakesh kumar")
 
 
-        send.setOnClickListener(View.OnClickListener {
-            var msgdata = msg.text.toString()
-            data.add(msgdata)
-            adapter.notifyDataSetChanged()
-            recyclerView.smoothScrollToPosition(data.size)
+        myflotingbtn.setOnClickListener(View.OnClickListener {
+            var exampleDialog : ExampleDialog  = ExampleDialog();
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
         })
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-
         adapter = RecAdapter(this,data)
-
         recyclerView.adapter = adapter
-
 
     }
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this,"Hello ${data[position]}",Toast.LENGTH_SHORT).show()
+    }
+
+    override fun applyTexts(username: String?) {
+        if (username != null) {
+            data.add(username)
+        }
+            adapter.notifyDataSetChanged()
+            recyclerView.smoothScrollToPosition(data.size)
     }
 }
