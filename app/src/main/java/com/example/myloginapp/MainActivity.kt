@@ -1,12 +1,14 @@
 package com.example.myloginapp
 
 import android.annotation.SuppressLint
+import android.content.AsyncQueryHandler
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.example.myloginapp.ui.AsyncTaskActivity
 
 class MainActivity : AppCompatActivity() {
 //this is a new change
@@ -152,7 +154,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun goHome() {
         var HomeIntent : Intent
-        HomeIntent =Intent(this,HomeActivity::class.java)
+        HomeIntent =Intent(this,AsyncTaskActivity::class.java)
         HomeIntent.putExtra("MyKey","Hii Raju")
         startActivity(HomeIntent)
     }
