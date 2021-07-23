@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLoginApp">
         <service android:name=".MyServices.MyService"></service>
+        <service android:name=".MyServices.MyBoundServices"></service>
 
         <activity android:name=".MyServices.MyServicesActivity" />
         <activity android:name=".ui.AsyncTaskActivity" />
