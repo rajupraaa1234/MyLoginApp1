@@ -36,7 +36,7 @@ class MyServicesActivity : AppCompatActivity() {
                     // Call a method from the LocalService.
                     // However, if this call were something that might hang, then this request should
                     // occur in a separate thread to avoid slowing down the activity performance.
-                    val num: Int = mService.randomNumber
+                    val num: Int = mService.getAdd(12,12)
                     Toast.makeText(this, "number: $num", Toast.LENGTH_SHORT).show()
                 }
             }

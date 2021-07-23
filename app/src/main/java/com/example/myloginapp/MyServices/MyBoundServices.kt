@@ -17,6 +17,9 @@ class MyBoundServices : Service() {
     val randomNumber: Int
         get() = mGenerator.nextInt(100)
 
+    fun getAdd(a :Int,b:Int): Int {
+        return a+b;
+    }
     /**
      * Class used for the client Binder.  Because we know this service always
      * runs in the same process as its clients, we don't need to deal with IPC.
