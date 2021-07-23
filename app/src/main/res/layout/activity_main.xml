@@ -75,6 +75,15 @@
       android:id="@+id/mytxt"
       android:layout_height="wrap_content"/>
 
+    <Button
+        android:id="@+id/service"
+        android:layout_width="wrap_content"
+        android:text="services"
+        android:layout_margin="10dp"
+        android:onClick="ClickHandler"
+        android:gravity="end"
+        android:layout_height="wrap_content"/>
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"

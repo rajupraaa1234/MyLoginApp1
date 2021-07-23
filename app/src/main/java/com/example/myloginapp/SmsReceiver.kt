@@ -36,6 +36,8 @@ class SmsReceiver : BroadcastReceiver() {
                     //                            Log.d("Exception caught",e.getMessage());
                 }
             }
+        }else if(intent!!.action.equals("android.intent.action.PHONE_STATE")){
+            Toast.makeText(context,"Raju Calling", Toast.LENGTH_SHORT).show()
         }
     }
 }

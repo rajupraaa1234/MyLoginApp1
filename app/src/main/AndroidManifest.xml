@@ -4,6 +4,7 @@
     package="com.example.myloginapp">
 
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
@@ -13,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLoginApp">
-        <activity android:name=".ui.AsyncTaskActivity"></activity>
+        <service android:name=".MyServices.MyService"></service>
+
+        <activity android:name=".MyServices.MyServicesActivity" />
+        <activity android:name=".ui.AsyncTaskActivity" />
         <activity
             android:name=".DashBorad"
             android:label="@string/title_activity_dash_borad"
@@ -29,12 +33,10 @@
         </activity>
 
         <receiver android:name=".SmsReceiver">
-                <intent-filter>
-                    <action android:name="android.provider.Telephony.SMS_RECEIVED"></action>
-
-                </intent-filter>
-
-
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
         </receiver>
     </application>
 

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.example.myloginapp.MyServices.MyServicesActivity
 import com.example.myloginapp.ui.AsyncTaskActivity
 
 class MainActivity : AppCompatActivity() {
@@ -126,7 +127,14 @@ class MainActivity : AppCompatActivity() {
             R.id.google->{openGoogle()}
             R.id.dail->{openDail()}
             R.id.sarf->{openCamera()}
+            R.id.service->{openServiceActivity()}
         }
+    }
+
+    private fun openServiceActivity() {
+        var HomeIntent : Intent
+        HomeIntent =Intent(this,MyServicesActivity::class.java)
+        startActivity(HomeIntent)
     }
 
     private fun openCamera() {
