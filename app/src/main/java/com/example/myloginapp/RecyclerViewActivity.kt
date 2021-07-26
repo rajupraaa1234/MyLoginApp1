@@ -13,15 +13,10 @@ import com.example.myloginapp.interfacePackage.OnClickListner
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class RecyclerViewActivity : AppCompatActivity(), OnClickListner,ExampleDialog.ExampleDialogListener{
+
+
     var data : ArrayList<String> = ArrayList<String>()
-
-
-
-
-    //var data = arrayOf("Raju kumar","Rahul kumar gupta","Raja kumar","Ankit kumar","Anmol kumar")
-
     lateinit var adapter: RecAdapter
-
     lateinit var recyclerView: RecyclerView
     lateinit var send : Button
     lateinit var msg : EditText

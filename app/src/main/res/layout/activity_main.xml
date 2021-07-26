@@ -75,6 +75,9 @@
       android:id="@+id/mytxt"
       android:layout_height="wrap_content"/>
 
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
     <Button
         android:id="@+id/service"
         android:layout_width="wrap_content"
@@ -83,17 +86,42 @@
         android:onClick="ClickHandler"
         android:gravity="end"
         android:layout_height="wrap_content"/>
+     <Button
+         android:id="@+id/alarm"
+         android:layout_width="wrap_content"
+         android:text="Alarm"
+         android:layout_margin="10dp"
+         android:onClick="ClickHandler"
+         android:gravity="end"
+         android:layout_height="wrap_content"/>
 
+     <Button
+         android:id="@+id/popup"
+         android:layout_width="wrap_content"
+         android:text="Popup"
+         android:inputType="textCapSentences"
+         android:textColor="@color/white"
+         android:layout_gravity="center"
+         android:gravity="end"
+         android:layout_height="wrap_content"/>
+
+ </LinearLayout>
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_margin="20dp"
         android:entries="@array/lanuage"
         android:layout_height="wrap_content"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
     <Button
         android:id="@+id/sarf"
         android:layout_width="wrap_content"
         android:text="SARF"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
         android:layout_gravity="center"
         android:onClick="ClickHandler"
         android:gravity="end"
@@ -104,6 +132,7 @@
         android:layout_width="wrap_content"
         android:text="Recycler data"
         android:layout_gravity="center"
+        android:layout_marginStart="10dp"
         android:onClick="ClickHandler"
         android:gravity="end"
         android:layout_height="wrap_content"/>
@@ -115,13 +144,15 @@
         android:inputType="textCapSentences"
         android:layout_gravity="center"
         android:onClick="ClickHandler"
+        android:layout_marginStart="10dp"
         android:gravity="end"
         android:layout_height="wrap_content"/>
+  </LinearLayout>
 
     <TextView
         android:id="@+id/focus"
-        android:layout_width="70dp"
-        android:text="check"
+        android:layout_width="wrap_content"
+        android:text="change background"
         android:background="@drawable/btn_back"
         android:layout_margin="20dp"
         android:inputType="textCapSentences"
@@ -132,15 +163,7 @@
         android:layout_height="30dp"/>
 
 
-    <Button
-        android:id="@+id/popup"
-        android:layout_width="wrap_content"
-        android:text="Popup"
-        android:inputType="textCapSentences"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:gravity="end"
-        android:layout_height="wrap_content"/>
+
 
 
 </LinearLayout>

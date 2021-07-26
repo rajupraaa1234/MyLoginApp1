@@ -14,7 +14,26 @@ import androidx.annotation.RequiresApi
 
 class SmsReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        Log.i("MyReciever","onRecieved")
+//
+//       if(intent!=null){
+//           Toast.makeText(context,"AlarmedCalled",Toast.LENGTH_SHORT).show()
+//           Log.i("MyReciever","AlarmCalled")
+//           if(intent.action.equals("android.intent.action.BOOT_COMPLETED")){
+//               Log.i("MyReciever","Boot_Completed")
+//               Toast.makeText(context,"Boot_Completed",Toast.LENGTH_SHORT).show()
+//           }
+//           if(intent.extras!=null){
+//               var myData = intent.extras!!.get("MyValue").toString()
+//               //var data = intent.getStringExtra("MyValue")
+//               Log.i("MyReciever","onRecieved " + myData)
+//           }else{
+//               var data = intent.getStringExtra("MyValue").toString()
+//               Log.i("MyReciever","onRecieved " + data)
+//           }
+//       }
+//        if(intent!!.action.equals("android.provider.Telephony.SMS_RECEIVED")){
+//            Log.i("MyReciever","onRecieved " + intent.action)
+//        }
         if (intent!!.action.equals("android.provider.Telephony.SMS_RECEIVED")) {
             Log.i("MyReciever","Recieved")
             val bundle = intent!!.extras //---get the SMS message passed in---

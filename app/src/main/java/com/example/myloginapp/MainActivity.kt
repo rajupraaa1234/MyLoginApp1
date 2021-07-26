@@ -128,7 +128,14 @@ class MainActivity : AppCompatActivity() {
             R.id.dail->{openDail()}
             R.id.sarf->{openCamera()}
             R.id.service->{openServiceActivity()}
+            R.id.alarm ->{setAlarm()}
         }
+    }
+
+    private fun setAlarm() {
+        var HomeIntent : Intent
+        HomeIntent =Intent(this,MyAlarmActivity::class.java)
+        startActivity(HomeIntent)
     }
 
     private fun openServiceActivity() {

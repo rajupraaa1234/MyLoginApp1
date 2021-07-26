@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -14,8 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLoginApp">
-        <service android:name=".MyServices.MyService"></service>
-        <service android:name=".MyServices.MyBoundServices"></service>
+        <activity android:name=".MyAlarmActivity"></activity>
+
+        <service android:name=".MyServices.MyService" />
+        <service android:name=".MyServices.MyBoundServices" />
 
         <activity android:name=".MyServices.MyServicesActivity" />
         <activity android:name=".ui.AsyncTaskActivity" />
@@ -33,12 +37,16 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".SmsReceiver">
+        <receiver android:name=".SmsReceiver" android:process=":remote">
             <intent-filter>
+                <action android:name="android.provider." />
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
                 <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
             </intent-filter>
         </receiver>
+
+
     </application>
 
 </manifest>
