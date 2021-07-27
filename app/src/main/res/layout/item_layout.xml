@@ -11,6 +11,10 @@
         android:gravity="center"
         android:layout_gravity="center"
         android:text="RAju kumar"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:layout_height="1dp"/>
 </LinearLayout>
