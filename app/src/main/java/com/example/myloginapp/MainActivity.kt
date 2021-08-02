@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.*
 import com.example.myloginapp.MyServices.MyServicesActivity
 import com.example.myloginapp.ui.AsyncTaskActivity
+import com.example.myloginapp.ui.WebServicesActivity
 
 class MainActivity : AppCompatActivity() {
 //this is a new change
@@ -129,7 +130,14 @@ class MainActivity : AppCompatActivity() {
             R.id.sarf->{openCamera()}
             R.id.service->{openServiceActivity()}
             R.id.alarm ->{setAlarm()}
+            R.id.web->{openWebServicesActivity()}
         }
+    }
+
+    private fun openWebServicesActivity() {
+        var HomeIntent : Intent
+        HomeIntent =Intent(this, WebServicesActivity::class.java)
+        startActivity(HomeIntent)
     }
 
     private fun setAlarm() {

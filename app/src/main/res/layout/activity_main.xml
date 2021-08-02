@@ -105,6 +105,18 @@
          android:gravity="end"
          android:layout_height="wrap_content"/>
 
+
+     <Button
+         android:id="@+id/web"
+         android:layout_width="wrap_content"
+         android:text="check"
+         android:inputType="textCapSentences"
+         android:layout_gravity="center"
+         android:onClick="ClickHandler"
+         android:layout_marginStart="10dp"
+         android:gravity="end"
+         android:layout_height="wrap_content"/>
+
  </LinearLayout>
     <Spinner
         android:id="@+id/spinner"
@@ -147,6 +159,7 @@
         android:layout_marginStart="10dp"
         android:gravity="end"
         android:layout_height="wrap_content"/>
+
   </LinearLayout>
 
     <TextView
