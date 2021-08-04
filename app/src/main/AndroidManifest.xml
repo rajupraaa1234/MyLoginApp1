@@ -16,7 +16,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLoginApp">
-        <activity android:name=".ui.WebServicesActivity"></activity>
+        <activity android:name=".FragmentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Map.MapsActivity" />
+        <activity android:name=".WhowroteItActivity" />
+        <activity android:name=".ui.WebServicesActivity" />
         <activity android:name=".MyAlarmActivity" />
 
         <service android:name=".MyServices.MyService" />
@@ -31,11 +40,7 @@
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <receiver
@@ -48,6 +53,10 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
     </application>
 
 </manifest>
